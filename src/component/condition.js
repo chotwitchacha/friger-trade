@@ -1,7 +1,6 @@
 import React from "react";
 import './model.css'
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 
 function Condition({show, setShow}) {
 
@@ -22,7 +21,7 @@ function Condition({show, setShow}) {
             <div className="modal-con">
                 <Box>
                     <div className="divCon">
-                        <img src='/logo.png' style={{height: '80px'}}/>
+                        <image src='/logo.png' style={{height: '80px'}}/>
                         <p className="pCon">รับทราบข้อกําหนดเงื่อนไข</p>
                     </div>
                     <div className="divDesc">

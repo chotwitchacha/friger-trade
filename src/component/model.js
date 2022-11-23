@@ -7,13 +7,10 @@ import { Card, Input, Tooltip, Checkbox, Select, Button    } from 'antd';
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from '../firebase';
 import { useNavigate } from 'react-router-dom'
-import { teal } from "@mui/material/colors";
-import { async } from "@firebase/util";
 import Swal from 'sweetalert2'
 
 const { Meta } = Card;
 
-const formatNumber = (value) => new Intl.NumberFormat().format(value);
 const NumericInput = (props) => {
     const { value, onChange } = props;
     const handleChange = (e) => {
@@ -32,11 +29,6 @@ const NumericInput = (props) => {
       }
       onChange(valueTemp.replace(/0*(\d+)/, '$1'));
     };
-    const title = value ? (
-      <span className="numeric-input-title">{value !== '-' ? formatNumber(Number(value)) : '-'}</span>
-    ) : (
-      'Input a number'
-    );
     return (
       <Tooltip trigger={['focus']}  overlayClassName="numeric-input">
         <Input
@@ -50,9 +42,8 @@ const NumericInput = (props) => {
   };
 
 
-function Model({show, setShow, id, image, title, price}) {
+function Model({show, setShow, image, title, price}) {
     const [value, setValue] = useState(0);
-    const [total, setTotal] = useState(0)
     const [datas, setDatas] = useState([]);
     const [tel, setTel] = useState('')
     const [name, setName] = useState('')
@@ -87,31 +78,31 @@ function Model({show, setShow, id, image, title, price}) {
     const onChangeWatse = (value) => {
         setValue(`${value}`)
         setAlert('')
-        if (value == 0) {
+        if (value === 0) {
             setCost(0)
             setAlert('')
-        } else if (value <= 3 && value != 0) {
+        } else if (value <= 3 && value !== 0) {
             setCost(50)
             setAlert('')
-        } else if (value == 4) {
+        } else if (value === 4) {
             setCost(60)
             setAlert('')
-        } else if (value == 5) {
+        } else if (value === 5) {
             setCost(70)
             setAlert('')
-        } else if (value == 6) {
+        } else if (value === 6) {
             setCost(80)
             setAlert('')
-        } else if (value == 7) {
+        } else if (value === 7) {
             setCost(85)
             setAlert('')
-        } else if (value == 8) {
+        } else if (value === 8) {
             setCost(95)
             setAlert('')
-        } else if (value == 9) {
+        } else if (value === 9) {
             setCost(105)
             setAlert('')
-        } else if (value == 10) {
+        } else if (value === 10) {
             setCost(120)
             setAlert('')
         } else if (value > 10 && value <= 15) {
@@ -214,7 +205,7 @@ function Model({show, setShow, id, image, title, price}) {
             }]
         });
         console.log("Document written with ID: ", docRef.id);
-        if (docRef.id != '') {
+        if (docRef.id !== '') {
             localStorage.setItem("order", docRef.id)
             navigate('/result')
         }
@@ -292,7 +283,7 @@ function Model({show, setShow, id, image, title, price}) {
                                             {alert}
                                         </p>
                                     </div>
-                                    {value == '' ? <p>รวมราคาสินค้า : 0 บาท</p>
+                                    {value === '' ? <p>รวมราคาสินค้า : 0 บาท</p>
                                         : <p>รวมราคาสินค้า : { result } บาท</p>
                                     }
                                     <p>ชื่อผู้รับสินค้า : &nbsp;
@@ -341,18 +332,18 @@ function Model({show, setShow, id, image, title, price}) {
 
                                     </p>
                                     <p>ค่าขนส่ง : {cost} บาท</p>
-                                    {value == '' ? <p>รวมเป็นเงิน 0 บาท</p>
+                                    {value === '' ? <p>รวมเป็นเงิน 0 บาท</p>
                                         : <p>รวมเป็นเงิน {Totals} บาท</p>
                                     }
                                     <div className="boxBtnBuy">
                                         <button 
                                             disabled={
                                                 value > 30 || 
-                                                value == '' ||  
-                                                name == '' ||  
-                                                address == '' ||  
-                                                tel == '' || 
-                                                provin == '' } className="btnBuy" onClick={submit}> กดสั่งซื้อ</button>
+                                                value === '' ||  
+                                                name === '' ||  
+                                                address === '' ||  
+                                                tel === '' || 
+                                                provin === '' } className="btnBuy" onClick={submit}> กดสั่งซื้อ</button>
                                     </div>
 
                                 </div >

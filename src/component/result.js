@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button, Result, Layout } from 'antd';
+import { Layout } from 'antd';
 import '../App.css'
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import { useNavigate } from 'react-router-dom'
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 function Order() {
     const navigate = useNavigate()
@@ -22,14 +21,14 @@ function Order() {
             <Header style={{height: 'fit-content', background: 'white', paddingInline: 'inherit'}}>
                 <div className='header'>
                     <div className="textlogo">
-                        <img src='/logo.png' style={{height: '70px'}}/>
+                        <image src='/logo.png' style={{height: '70px'}}/>
                         <h1 className='text' >FINGERTREND</h1>
                     </div>
                 </div>
             </Header>
             <Content className='content'>
                 <Box className='boxOrder'>
-                    <img 
+                    <image
                         style={{
                             width: '20%',
                             margin: '20px'

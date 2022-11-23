@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import '../App.css'
-import { Layout , Typography, Input, Card} from 'antd';
+import { Layout } from 'antd';
 import { useNavigate } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Image } from 'antd';
 import Model from "./model";
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 function Detail() {
     const [showModal, setShowModal] = useState(false)
@@ -47,7 +47,7 @@ function Detail() {
             <Header style={{height: 'fit-content', background: 'white', paddingInline: 'inherit'}}>
                 <div className='header'>
                     <div className="textlogo">
-                        <img src='/logo.png' style={{height: '70px'}}/>
+                        <image src='/logo.png' style={{height: '70px'}}/>
                         <h1 className='text' >FINGERTREND</h1>
                     </div>
                     <button className="btn" onClick={backMain}> กลับไปหน้าแรก</button>

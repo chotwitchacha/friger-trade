@@ -2,13 +2,13 @@ import React , { useState, useEffect} from 'react';
 import '../App.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { Layout , Typography, Input, Card} from 'antd';
+import { Layout , Input, Card} from 'antd';
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase';
 import { useNavigate } from 'react-router-dom'
 import Condition from './condition';
 
-const { Header, Footer, Content } = Layout;
+const { Header,  Content } = Layout;
 const { Search } = Input;
 const { Meta } = Card;
 
@@ -32,9 +32,7 @@ function Main() {
 
     useEffect(()=>{
         fetchPost();
-        console.log('showModal',showModal);
-        console.log('cookie',cookie);
-        if (cookie == 'false') {
+        if (cookie === 'false') {
             setShowModal(false)
         }
     }, [])
@@ -67,7 +65,7 @@ function Main() {
         <Layout>
             <Header style={{height: 'fit-content', background: 'white', paddingInline: 'inherit'}}>
                 <div className='header'>
-                <img src='/logo.png' style={{height: '70px'}}/>
+                <image src='/logo.png' style={{height: '70px'}}/>
                 <h1 className='text' >FINGERTREND</h1>
                 <Search 
                     className='boxsearch' 
