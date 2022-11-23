@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.text {
+  margin: auto;
+  font-family: fantasy;
+  font-size: xxx-large;
+}
+
+.boxsearch {
+  margin-inline: 50px;
+}
+
+.content {
+  padding: 20px;
+  height: 89vh;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  width: fit-content;
+  height: 50px;
+  border-radius: 15px;
+  border-color: #042363;
+  color: black;
+  font-family: 'Prompt', sans-serif;
+  font-size: large;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btnSearch {
+  width: 20%;
+  height: 50px;
+  border-radius: 15px;
+  border-color: #042363;
+  color: black;
+  font-family: 'Prompt', sans-serif;
+  font-size: large;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btnSearch:hover {
+  background-color: #042363;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #042363;
+  color: white;
+}
+
+.btnBuy {
+  width: fit-content;
+  height: 40px;
+  border-radius: 15px;
+  border-color: #042363;
+  color: black;
+  font-family: 'Prompt', sans-serif;
+  font-size: large;
+  cursor: pointer;
+}
+
+.btnBuy:hover {
+  background-color: #042363;
+  color: white;
+}
+
+.btnBuy:disabled, btnBuy[disabled] {
+  cursor: no-drop;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.textlogo {
+  display: flex;
+}
+
+.gridImg {
+  padding: 20px;
+  height: -webkit-fill-available;
+}
+
+.boxDetail{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.textP {
+  font-family: 'Prompt', sans-serif;
+  font-size: xx-large;
+  color: #0a2966;
+  margin: unset;
+  align-self: center;
+  font-weight: bolder;
+}
+
+.textDetail {
+  font-family: 'Prompt', sans-serif;
+  color: #0b2160;
+  font-size: large;
+}
+
+.boxBtnBuy {
+  display: flex;
+  justify-content: end;
+}
+
+.boxOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textOrder {
+  font-family: 'Prompt', sans-serif;
+  font-size: x-large;
+  margin: 50px;
+}
+
+

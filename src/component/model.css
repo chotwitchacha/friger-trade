@@ -1,0 +1,104 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    width: 120vh;
+    background-color: white;
+    height: 70%;
+    border-radius: 10px;
+    border-color: #042363;
+    border-style: solid;
+  }
+
+.textC {
+    font-family: 'Prompt', sans-serif;
+}
+
+.divDet {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Prompt', sans-serif;
+    color: #0b2160;
+    width: -webkit-fill-available;
+    padding-right: 20px;
+    height: -webkit-fill-available;
+    font-size: large;
+    justify-content: space-evenly;
+}
+
+.btnClose {
+    align-self: flex-end;
+}
+
+.checkBox {
+    font-family: 'Prompt', sans-serif;
+    color: #0b2160;
+    font-size: large;
+}
+
+.divCon {
+    display: flex;
+    margin: 2%;
+}
+
+.pCon {
+    font-family: 'Prompt', sans-serif;
+    color: #0b2160;
+    font-size: x-large;
+}
+
+.divDesc {
+    padding: 0 10%;
+    margin: 20px;
+    font-family: 'Prompt', sans-serif;
+    color: #0b2160;
+    font-size: large;
+}
+
+.modal-con {
+    width: 90vh;
+    background-color: white;
+    height: 50%;
+    border-radius: 10px;
+    border-color: #042363;
+    border-style: solid;
+  }
+
+  .boxBtnBuy {
+    display: flex;
+    justify-content: end;
+  }
+
+  .btnBuy {
+    width: fit-content;
+    height: 40px;
+    border-radius: 15px;
+    border-color: #042363;
+    color: black;
+    font-family: 'Prompt', sans-serif;
+    font-size: large;
+    cursor: pointer;
+  }
+
